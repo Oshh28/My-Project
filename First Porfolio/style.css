@@ -1,0 +1,236 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #23263A;
+    color: white;
+}
+/* Header and Navigation Panel */
+.Head-Container {
+    background-color: #202236;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    color: white;
+    display: flex;
+    gap: 1000px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.Nav-bar {
+    display: flex;
+    gap: 50px;
+}
+
+.Home {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.About {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.Skills {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.Contact {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.Home:hover {
+    color: #FF4A57;
+}
+
+.About:hover {
+    color: #FF4A57;
+}
+
+.Skills:hover  {
+    color: #FF4A57;
+}
+
+.Contact:hover {
+    color: #FF4A57;
+}
+
+.Logo {
+    font-size: 25px;
+    font-weight: 900;
+    margin-left: 200px;
+}
+
+/* Title Page */
+.Background-Container {
+    margin-left: 190px;
+    margin-top: 200px;
+}
+
+.Title {
+    font-size: 100px;
+    font-weight: 400;
+}
+
+.Description {
+    font-size: 30px;
+    margin: 30px 0px 30px 10px;
+    color: rgba(255, 255, 255, 0.637);
+}
+
+.btn_Journey {
+    background-color: #FF4A57;
+    color: white;
+    margin-left: 10px;
+    font-weight: 900;
+    font-size: 20px;
+    height: 80px;
+    width: 400px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 185px;
+}
+
+/* About Me Page */
+#About-Me {
+    background-color: #1F2332;
+    height: 1045px;
+}
+
+.About-Container {
+    margin: 0px 200px 0px 200px;
+    padding-top: 250px;
+}
+
+.Profile-Image {
+    float: left;
+    margin-right: 30px;
+    border: #FF4A57 solid;
+}
+
+.Title-Discover {
+    color: #FF4A57;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.Title-AboutMe {
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.Line-About {
+    background-color: #FF4A57;
+    height: 5px;
+    margin: 0px 830px 50px 580px;
+}
+
+.Description-About {
+    font-size: 20px;
+    color: #ffffffb9;
+    line-height: 1.5;
+    margin-bottom: 50px;
+}
+
+.Personal-Info {
+    font-size: 20px;
+    display: flex;
+    gap: 200px;
+    margin-bottom: 50px;
+}
+
+.Name {
+    margin-bottom: 20px;
+}
+
+.Locations {
+    margin-bottom: 20px;
+}
+
+.btn_Download {
+    background-color: #FF4A57;
+    color: white;
+    border: none;
+    font-weight: 900;
+    height: 50px;
+    width: 200px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.btn_LearnMore {
+    color: #FF4A57;
+    border: #FF4A57 solid;
+    background: none;
+    font-weight: 900;
+    height: 50px;
+    width: 200px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+/* Skill Page */
+.Skills-Container {
+    margin: 150px 200px 0px 200px;
+}
+
+.Set-Container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 350px 350px;
+    gap: 50px;
+}
+
+.Skill {
+    background-color: #2B2C40;
+    padding: 50px;
+}
+
+.Title-Services {
+    color: #FF4A57;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.Title-Skill {
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.Line-Skill {
+    background-color: #FF4A57;
+    height: 5px;
+    margin: 0px 1410px 50px 0px;
+}
+
+.Skill-Logo {
+    margin-bottom: 20px;
+}
+
+.Skill_Name {
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.Skill_Description {
+    line-height: 1.8;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.753);
+}
+
