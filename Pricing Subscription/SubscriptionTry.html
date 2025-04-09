@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #212121;
+        }
+
+        .Main {
+            color: white;
+        }
+
+        .Page-Title {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+
+        .Subscription-Options {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+            cursor: pointer;
+        }
+
+        .Sub {
+            background-color: rgb(0, 0, 0);
+            border-radius: 5px;
+            font-weight: 600;
+            text-align: center;
+            line-height: 30px;
+            height: 30px;
+            width: 100px;
+        }
+
+        .Monthly {
+            color: black;
+            background-color: #87ff87;;
+        }
+
+
+        .Container {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            gap: 50px;
+        }
+
+        .Plan {
+            border-radius: 10px;
+            width: 300px;
+            height: 400px;
+        }
+
+        .Personal {
+            background-color: black;
+            color: white;
+            width: 300px;
+            height: 400px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .Personal:hover {
+            box-shadow: 0 0 10px #00ff00;
+            transform: scale(1.05);
+        }
+
+        .Team {
+            background-color: #87ff87;
+            color: black;
+            width: 300px;
+            height: 400px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .Team:hover {
+            box-shadow: 0 0 10px #00ff00;
+            transform: scale(1.05);
+        }
+
+        .Business {
+            background-color: #ffffffef;
+            color: black;
+            width: 300px;
+            height: 400px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .Business:hover {
+            box-shadow: 0 0 10px #00ff00;
+            transform: scale(1.05);
+        }
+
+        .Title {
+            margin-top: 20px;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .Description {
+            margin-bottom: 20px;
+        }
+
+        .Price {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .Upper-Box {
+            border-bottom: #b3a0a08f solid;
+            margin-left: 25px;
+            margin-right: 25px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            margin-left: 45px;
+            text-align: left;
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        ul > li {
+            margin-bottom: 5px;
+        }
+
+        .Btn {
+            background-color: black;
+            color: white;
+            height: 40px;
+            width: 250px;
+            border: none;
+            font-weight: 700;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .Green {
+            color: black;
+            background-color: #87ff87;
+            cursor: pointer;
+        }
+
+        @media (max-width: 830px) {
+            .Main {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .Container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="Main">
+        <div class="Page-Title"><h1>Affordable Pricing Plan</h1></div>
+        <div class="Subscription-Options">
+            <div class="Sub Monthly">Monthly</div>
+            <div class="Sub Yearly">Yearly</div>
+            <div class="Sub Lifetime">Lifetime</div>
+        </div>
+        <div class="Container">
+            <div class="Personal Plan">
+                <div class="Upper-Box">
+                    <div class="Title">Personal Plan</div>
+                    <div class="Description">Great for UI Designer</div>
+                    <div class="Price"><h1>$29</h1>/Month</div>
+                </div>
+                <ul>
+                    <li><span style="color: #5CB338;">✔</span> Up to Team Members</li>
+                    <li><span style="color: #5CB338;">✔</span> Unlimited Usage</li>
+                    <li><span style="color: #5CB338;">✔</span> Unlimited Drive Storage</li>
+                    <li><span style="color: #5CB338;">✔</span> oncierge Help Center</li>
+                    <li><span style="color: #5CB338;">✔</span> Smart Brand Personies</li>
+                    <li><span style="color: #5CB338;">✔</span> Custom UI Brand Model</li>
+                </ul>
+                <button class="Btn Green">Buy The Plan</button>
+            </div>
+
+            <div class="Team Plan">
+                <div class="Upper-Box">
+                    <div class="Title">Team Plan</div>
+                    <div class="Description">Great for UI Designer</div>
+                    <div class="Price"><h1>$39</h1>/Month</div>
+                </div>
+                <ul>
+                    <li>✔ Up to Team Members</li>
+                    <li>✔ Unlimited Usage</li>
+                    <li>✔ Unlimited Drive Storage</li>
+                    <li>✔ oncierge Help Center</li>
+                    <li>✔ Smart Brand Personies</li>
+                    <li>✔ Custom UI Brand Model</li>
+                </ul>
+                <button class="Btn">Buy The Plan</button>
+            </div>
+
+            <div class="Business Plan">
+                <div class="Upper-Box">
+                    <div class="Title">Business Plan</div>
+                    <div class="Description">Great for UI Designer</div>
+                    <div class="Price"><h1>$49</h1>/Month</div>
+                </div>
+                <ul>
+                    <li>✔ Up to Team Members</li>
+                    <li>✔ Unlimited Usage</li>
+                    <li>✔ Unlimited Drive Storage</li>
+                    <li>✔ oncierge Help Center</li>
+                    <li>✔ Smart Brand Personies</li>
+                    <li>✔ Custom UI Brand Model</li>
+                </ul>
+                <button class="Btn">Buy The Plan</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

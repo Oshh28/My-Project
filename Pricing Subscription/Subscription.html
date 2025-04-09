@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Subscription</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #212121;
+        }
+
+        .Main {
+            width: 100%;
+        }
+
+        .Container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            gap: 20px;
+        }
+        
+        .Affordable-Page {
+            text-align: center;
+            font-size: 25px;
+            color: white;
+            margin: 45px;
+        }
+
+        .Subscription-Plan {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .Monthly-Plan {
+            background-color: #87ff87;
+            border-radius: 3px;
+            text-align: center;
+            line-height: 30px;
+            height: 30px;
+            width: 100px;
+        }
+
+        .Yearly-Plan {
+            background-color: black;
+            text-align: center;
+            border-radius: 3px;
+            line-height: 30px;
+            height: 30px;
+            width: 100px;
+            color: white;
+        }
+
+        .Lifetime-Plan {
+            background-color: black;
+            text-align: center;
+            border-radius: 3px;
+            line-height: 30px;
+            height: 30px;
+            width: 100px;
+            color: white;
+        }
+
+        ul > li{
+            text-align: left;
+            list-style: none;
+            padding: 0;
+            padding-left: 50px;
+            margin-bottom: 5px;
+        }
+
+        .Box {
+            border-bottom: 2px solid gray;
+            margin-bottom: 20px;
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+
+        .Plan {
+            background-color: rgb(255, 255, 255);
+            border-radius: 2%;
+            text-align: center;
+            width: 300px;
+            height: 400px;
+        }
+
+        .Personal {
+            background-color: black;
+            color: white;
+        }
+
+        .Team {
+            background-color: rgb(135, 255, 135);
+            color: black;
+        }
+
+        .Title {
+            margin-top: 20px;
+        }
+
+        .Price {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .Description {
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        .Button-P {
+            margin-top: 20px;
+            background-color: #87ff87;
+            color: black;
+            width: 200px;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .Button-T {
+            margin-top: 20px;
+            background-color: black;
+            color: white;
+            width: 200px;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 830px) {
+            .Main {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: center;
+                margin-top: auto;
+                height: 100vh;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="Main">
+        <div class="Affordable-Page"><h1>Affordable Pricing Plans</h1></div>
+            <div class="Subscription-Plan">
+                <div class="Monthly-Plan">Monthly</div>
+                <div class="Yearly-Plan">Yearly</div>
+                <div class="Lifetime-Plan">Lifetime</div>
+            </div>
+        <div class="Container">
+            <div class="Personal Plan">
+                <div class="Box">
+                    <div class="Title"><h3>Personal Plan</h3></div>
+                    <div class="Description">Great for UI Designer</div>
+                    <div class="Price"><h1>$29/Month</h1></div>
+                </div>
+                <ul>
+                    <li><span style="color: #87ff87;">✔</span> Up to Team Members</li>
+                    <li><span style="color: #87ff87;">✔</span> Unlimited Usage</li>
+                    <li><span style="color: #87ff87;">✔</span> Unlimited Drive Storage</li>
+                    <li><span style="color: #87ff87;">✔</span> Concierge Help Center</li>
+                    <li><span style="color: #87ff87;">✔</span> Smart Brand Personies</li>
+                    <li><span style="color: #87ff87;">✔</span> Custom UI Brand Model</li>
+                </ul>
+                <button class="Button-P"><h4>Buy The Plan</h4></button>
+            </div>
+
+            <div class="Team Plan">
+                <div class="Box">
+                    <div class="Title"><h3>Team Plan</h3></div>
+                    <div class="Description">Great for UI Designer</div>
+                    <div class="Price"><h1>$39/Month</h1></div>
+                </div>
+                <ul>
+                    <li>✔ Up to Team Members</li>
+                    <li>✔ Unlimited Usage</li>
+                    <li>✔ Unlimited Drive Storage</li>
+                    <li>✔ Concierge Help Center</li>
+                    <li>✔ Smart Brand Personies</li>
+                    <li>✔ Custom UI Brand Model</li>
+                </ul>
+                <button class="Button-T"><h4>Buy The Plan</h3></button>
+            </div>
+            
+            <div class="Business Plan">
+                <div class="Box">
+                    <div class="Title"><h3>Business Plan</h3></div>
+                    <div class="Description">Great for UI Designer</div>
+                    <div class="Price"><h1>$49/Month</h1></div>
+                </div>
+                <ul>
+                    <li>✔ Up to Team Members</li>
+                    <li>✔ Unlimited Usage</li>
+                    <li>✔ Unlimited Drive Storage</li>
+                    <li>✔ Concierge Help Center</li>
+                    <li>✔ Smart Brand Personies</li>
+                    <li>✔ Custom UI Brand Model</li>
+                </ul>
+                <button class="Button-T"><h4>Buy The Plan</h4></button>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
