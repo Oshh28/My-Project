@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Header & Navigation Scope */
+#Header {
+    position: fixed;
+    background-color: #AD2426;
+    border-bottom: 10px solid rgb(143, 13, 13);
+    width: 100%;
+    z-index: 9999;
+}
+
+.Header-Content { 
+    display: flex;
+    gap: 110px;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.Nav, a, button {
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+
+.Head-Logo {
+    cursor: pointer;
+    margin-right: 150px;
+}
+
+.Nav_links {
+    list-style: none;
+    margin-right: 200px;
+}
+
+.Nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.Nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.Nav_links li a:hover {
+    color: #ff9023;
+}
+
+.btn-SignUp {
+    padding: 9px 25px;
+    background: none;
+    border: 1px solid white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.btn-SignUp:hover {
+    background-color: #ff9023;
+    border: #ff9023;
+}
+
+/* Home Page Scope ==========================================================*/
+
+#Home-Page {
+    background-image: url("/Images/Home-Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 950px;
+    color: white;
+}
+
+.Text-Content {
+    margin-left: 110px;
+    padding-top: 250px;
+}
+
+.Home-Tagline {
+    font-size: 1.8rem;
+    letter-spacing: 5px;
+}
+
+.Home-Heading {
+    margin-top: 30px;
+    font-size: 5.2rem;
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.Home-Description {
+    margin-top: 50px;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.747);
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.Home-btnExplore {
+    margin-top: 50px;
+    background-color: #ff9023;
+    height: 60px;
+    width: 200px;
+    border: none;
+    border-radius: 30px;
+    font-weight: 900;
+    font-size: 1.1rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Special Offer Scope ==========================================================*/
+#Special-Offer {
+    width: 100%;
+    height: 950px;
+    background-color: #FAF9F6;
+    color: black;
+}
+
+.Special-Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 950px;
+}
+
+.Special-Title {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #AD2426;
+    margin-bottom: 30px;
+}
+
+.Special-Description  {
+    color: black;
+    margin-top: 50px;
+    font-size: 1.4rem;
+}
+
+.Card-Offers {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.Card-Offer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1px;
+    background-image: url("./Images/Special Offer Images/Special-BG.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 300px;
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 900;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Card-Offer:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(10, 10, 10, 0.5);
+}
+
+.Card-Overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 5), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 0px;
+    transition: padding-bottom 0.3s ease;
+  }
+  
+.Card-Offer:hover .Card-Overlay {
+    opacity: 1;
+    padding-bottom: 90px;
+}
+  
+.eye-icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Mission and Vision Scope ==========================================================*/
+#Mission-Vision {
+    width: 100%;
+    height: 950px;
+    background-color: #FBF5DF;
+    color: black;
+}
+
+.Mission-Vision-Content {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 950px;
+    grid-template-columns: 2fr 1fr ;
+    gap: 8px;
+}
+
+.Mission-Content {
+    margin-left: 110px;
+}
+
+.Mission-HeadTitle {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #AD2426;
+    margin-bottom: 80px;
+}
+
+.Mission-Icon {
+    float: left;
+    padding-right: 50px;
+}
+
+.Mission-Title {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #AD2426;
+}
+
+.Mission-Description {
+    font-size: 1.3rem;
+    margin-bottom: 80px;
+}
+
+.Vision-Icon {
+    float: right;
+    padding-left: 50px;
+}
+
+.Vision-Title {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #AD2426;
+    text-align: end;
+}
+
+.Vision-Description {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    text-align: end;
+}
+
+.Mission-PhotoHolder {
+    margin-right: 110px;
+    margin-left: 50px;
+}
+
+.M-Photo {
+    height: 600px;
+}
+
+/* College Courses Offers ============================================================*/
+#College-Courses-Offer {
+    width: 100%;
+    height: 950px;
+    background-color: #FAF9F6;
+    color: black;
+}
+
+.College-Courses-Content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 950px;
+}
+
+.HeadTitle-Container {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.Courses-HeadTitle {
+    font-size: 5rem;
+    font-weight: 900;
+    color: #AD2426;
+    width: 3000px;
+    float: left;
+    margin-left: 110px;
+    margin-right: 110px;
+}
+
+.Courses-Offers {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.Course {
+    width: 300px;
+    height: 400px;
+    border: 2px solid rgba(0, 0, 0, 0.438);
+    border-radius: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+.Course-Image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.Course-Photo {
+    border-radius: 18px;
+    height: 150px;
+    width: 260px;
+}
+
+.Course-Title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.Course-Description {
+    line-height: 16px;
+    color: #0000009c;
+    margin-bottom: 20px;
+    font-size: 10px;
+}
+
+.btn-EnrollNow {
+    background-color: #ff9c2370;
+    color: #AD2426;
+    border: none;
+    height: 40px;
+    width: 100%;
+    font-weight: 800;
+    
+}
+/* SHS Strand Offers =================================================================*/
+
+/* Teacher's Scope ===================================================================*/
+
+/* School Motto Scope ================================================================*/
+
+/* Contact Us Scope ==================================================================*/
+
+/* Footer Scope ======================================================================*/
