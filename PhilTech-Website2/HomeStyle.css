@@ -17,6 +17,10 @@
     z-index: 9999;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .Header-Content { 
     display: flex;
     justify-content: space-between;
@@ -52,19 +56,63 @@
     color: #ff9023;
 }
 
-.btn-SignUp {
-    padding: 9px 25px;
-    background: none;
-    border: 1px solid white;
-    border-radius: 50px;
+
+.btn-NavEnroll {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    border: 2px solid white;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffff;
+    gap: 10px;
+    font-weight: bold;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
     cursor: pointer;
-    transition: all 0.3s ease 0s;
 }
 
-.btn-SignUp:hover {
-    background-color: #ff9023;
-    border: #ff9023;
+.btn-NavEnroll .icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
 }
+
+.btn-NavEnroll:hover {
+    transform: scale(1.05);
+    background-color: #ff9023;
+    border: 2px solid #ff9023;
+}
+
+.btn-NavEnroll:hover .icon {
+  transform: translate(4px);
+}
+
+.btn-NavEnroll:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.btn-NavEnroll::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
 
 /* Home Page Scope ==========================================================*/
 
@@ -103,17 +151,61 @@
     font-weight: 500;
 }
 
-.Home-btnExplore {
-    margin-top: 50px;
-    background-color: #ff9023;
-    height: 60px;
-    width: 200px;
-    border: none;
-    border-radius: 30px;
-    font-weight: 900;
-    font-size: 1.1rem;
-    color: white;
-    cursor: pointer;
+.btn-3 {
+  scale: 1.4;
+  margin-left: 25px;
+  margin-top: 50px;
+  line-height: 1;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #ff9023;
+  color: #fff;
+  border-radius: 10rem;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 12px 24px 12px 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color 0.3s;
+}
+
+.btn-3 .button__icon-wrapper {
+  flex-shrink: 0;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  color: #ff9023;
+  background-color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.btn-3:hover {
+  background-color: #E55050;
+}
+
+.btn-3:hover .button__icon-wrapper {
+  color: #E55050;
+}
+
+.btn-3 .button__icon-svg--copy {
+  position: absolute;
+  transform: translate(-150%, 150%);
+}
+
+.btn-3:hover .button__icon-svg:first-child {
+  transition: transform 0.3s ease-in-out;
+  transform: translate(150%, -150%);
+}
+
+.btn-3:hover .button__icon-svg--copy {
+  transition: transform 0.3s ease-in-out 0.1s;
+  transform: translate(0);
 }
 
 /* Special Offer Scope ==========================================================*/
@@ -176,6 +268,11 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.Card-Title {
+    font-weight: 900;
+    font-size: 2rem;
+}
+
 .Card-Offer:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(10, 10, 10, 0.5);
@@ -206,6 +303,509 @@
     width: 40px;
     height: 40px;
 }
+
+/* PopUP Offers SHS Scope ==========================================================*/
+.Bg-PopOffers {
+    color: white;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.Bg-PopOffers.show {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.PopOffers-Box {
+    width: 70%;
+    height: 750px;
+    background-color: #AD2426;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    animation: fadeInUp 0.4s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.PopOffers-Container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1.5fr 2fr;
+    padding: 30px;
+    gap: 20px;
+}
+
+.PopOffers-Uniforms {
+    background-color: #EFE2E2;
+}
+
+.PopOffers-Content {
+    text-align: justify;
+}
+
+.PopOffers-Title {
+    letter-spacing: 5px;
+}
+
+.PopOffers-Programs {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.PopOffers-Session {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.PopOffers-Session-Schedule {
+    margin-bottom: 30px;
+}
+
+.PopOffers-FreeOffers {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.PopOffers-Freebies-Box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid #FF9D23;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.PopOffers-Curriculum {
+    margin-bottom: 30px;
+}
+
+.Curriculum-Title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.StrandOffer-Title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.PopOffers-Closer {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    font-size: 50px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.PopOffers-Closer:hover {
+    color: #FF9D23;
+}
+
+/* From Uiverse.io by cssbuttons-io */ 
+button {
+ position: relative;
+ display: inline-block;
+ cursor: pointer;
+ outline: none;
+ border: 0;
+ vertical-align: middle;
+ text-decoration: none;
+ background: transparent;
+ padding: 0;
+ font-size: inherit;
+ font-family: inherit;
+}
+
+button.Offer-btn-Enroll {
+ margin-top: 30px;
+ width: 12rem;
+ height: auto;
+}
+
+button.Offer-btn-Enroll .circle {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: relative;
+ display: block;
+ margin: 0;
+ width: 3rem;
+ height: 3rem;
+ background: #FF9D23;
+ border-radius: 1.625rem;
+}
+
+button.Offer-btn-Enroll .circle .icon {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ margin: auto;
+ background: #fff;
+}
+
+button.Offer-btn-Enroll .circle .icon.arrow {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ left: 0.625rem;
+ width: 1.125rem;
+ height: 0.125rem;
+ background: none;
+}
+
+button.Offer-btn-Enroll .circle .icon.arrow::before {
+ position: absolute;
+ content: "";
+ top: -0.29rem;
+ right: 0.0625rem;
+ width: 0.625rem;
+ height: 0.625rem;
+ border-top: 0.125rem solid #fff;
+ border-right: 0.125rem solid #fff;
+ transform: rotate(45deg);
+}
+
+button.Offer-btn-Enroll .button-text {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ padding: 0.75rem 0;
+ margin: 0 0 0 1.85rem;
+ color: #FF9D23;
+ font-weight: 700;
+ line-height: 1.6;
+ text-align: center;
+ text-transform: uppercase;
+}
+
+button:hover .circle {
+ width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+ background: #fff;
+ transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+ color: #fff;
+}
+
+/* PopUP Offers COLLEGE Scope ==========================================================*/
+.Bg-PopOffers2 {
+    color: white;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.Bg-PopOffers2.show {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.PopOffers-Box2 {
+    width: 70%;
+    height: 750px;
+    background-color: #AD2426;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    animation: fadeInUp 0.4s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.PopOffers-Container2 {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1.5fr 2fr;
+    padding: 30px;
+    gap: 20px;
+}
+
+.PopOffers-Uniforms2 {
+    background-color: #EFE2E2;
+}
+
+.PopOffers-Content2 {
+    text-align: justify;
+}
+
+.PopOffers-Title2 {
+    letter-spacing: 5px;
+}
+
+.PopOffers-Programs2 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.PopOffers-Session2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.PopOffers-Session-Schedule2 {
+    margin-bottom: 30px;
+}
+
+.PopOffers-FreeOffers2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.PopOffers-BringAFriend {
+    margin-bottom: 30px;
+}
+
+.PopOffers-Curriculum2 {
+    margin-bottom: 30px;
+}
+
+.Curriculum-Title2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.CourseOffer-Title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.PopOffers-CourseOffer {
+    margin-bottom: 30px;
+}
+
+.btn-Enroll2 {
+    background-color: #FF9D23;
+    font-weight: 700;
+    border: none;
+    border-radius: 30px;
+    height: 50px;
+    width: 180px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-Enroll2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(10, 10, 10, 0.5);
+}
+
+.PopOffers-Closer2 {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    font-size: 50px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.PopOffers-Closer2:hover {
+    color: #FF9D23;
+}
+
+/* PopUP Offers SUNDAY Scope ==========================================================*/
+
+.Bg-PopOffers3 {
+    color: white;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.Bg-PopOffers3.show {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.PopOffers-Box3 {
+    width: 70%;
+    height: 750px;
+    background-color: #AD2426;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    animation: fadeInUp 0.4s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.PopOffers-Container3 {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1.5fr 2fr;
+    padding: 30px;
+    gap: 20px;
+}
+
+.PopOffers-Uniforms3 {
+    background-color: #EFE2E2;
+}
+
+.PopOffers-Content3 {
+    text-align: justify;
+}
+
+.PopOffers-Title3 {
+    letter-spacing: 5px;
+}
+
+.PopOffers-Programs3 {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.PopOffers-Session3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.PopOffers-Session-Schedule3 {
+    margin-bottom: 30px;
+}
+
+.PopOffers-FreeOffers3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.PopOffers-Freebies-Box3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid #FF9D23;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.PopOffers-Discount {
+    margin-bottom: 30px;
+}
+
+.PopOffers-BringAFriend3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.PopOffers-Curriculum3 {
+    margin-bottom: 30px;
+}
+
+.Curriculum-Title3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.StrandOffer-Title3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.btn-Enroll3 {
+    background-color: #FF9D23;
+    font-weight: 700;
+    border: none;
+    border-radius: 30px;
+    height: 50px;
+    width: 180px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-Enroll3:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(10, 10, 10, 0.5);
+}
+
+.PopOffers-Closer3 {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    font-size: 50px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.PopOffers-Closer3:hover {
+    color: #FF9D23;
+}
+
 
 /* Mission and Vision Scope ==========================================================*/
 #Mission-Vision {
@@ -691,10 +1291,11 @@
     color: rgba(0, 0, 0, 0.548);
     padding: 0 5px;
     pointer-events: none;
-    transition: .5s;
+    transition: 0.3s ease;
 }
 
-.TxtField input {
+.TxtField input,
+.TxtField textarea {
     width: 100%;
     height: 60px;
     font-size: 16px;
@@ -705,6 +1306,16 @@
     border: 1.2px solid #FCDDB7;
     outline: none;
     border-radius: 10px;
+}
+
+.TxtField input {
+    height: 60px;
+    line-height: 16px;
+}
+
+.Message-Contact textarea {
+    height: 400px;
+    resize: none;
 }
 
 .Message-Contact textarea {
@@ -732,28 +1343,132 @@
     transition: .5s;
 }
 
-.TxtField input:focus~label,
-.TxtField input:valid~label, 
-.Message-Contact textarea:focus~label,
-.Message-Contact textarea:valid~label {
+.TxtField input::placeholder,
+.TxtField textarea::placeholder {
+    color: transparent;
+}
+
+.TxtField input:focus ~ label,
+.TxtField input:not(:placeholder-shown) ~ label,
+.TxtField textarea:focus ~ label,
+.TxtField textarea:not(:placeholder-shown) ~ label {
     top: 0;
+    left: 10px;
     font-size: 14px;
 }
 
-.Contact-GetInTouch button {
+.btn-sbmt button {
+    font-family: inherit;
+    font-size: 18px;
     background-color: #AD2426;
-    border: none;
-    border-radius: 30px;
-    font-weight: 800;
-    height: 50px;
-    width: 200px;
-    cursor: pointer;
     color: white;
-    transition: all 0.3s ease;
+    padding: 0.8em 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    cursor: pointer;
 }
 
-.Contact-GetInTouch button:hover {
-    transform: scale(1.05);
+.btn-sbmt button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-sbmt button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-sbmt button span {
+    display: block;
+    margin-left: 0.4em;
+    transition: all 0.3s;
+}
+
+.btn-sbmt button svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
+    transition: all 0.3s;
+}
+
+.btn-sbmt button .svg-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 0.5em;
+    transition: all 0.3s;
+}
+
+.btn-sbmt button:hover .svg-wrapper {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-sbmt button:hover svg {
+  transform: rotate(45deg);
+}
+
+#toastBox {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9998;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.toast {
+    width: 400px;
+    height: 80px;
+    background-color: #fff;
+    font-weight: 500;
+    margin: 15px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    position: relative;
+    transform: translateX(100%);
+    animation: moveleft 0.5s linear forwards;
+}
+
+@keyframes moveleft {
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.toast i {
+    margin: 0 20px;
+    font-size: 35px;
+    color: green;
+}
+
+.toast::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: green;
+    animation: anim 5s linear forwards;
+}
+
+@keyframes anim {
+    100% {
+        width: 0;
+    }
 }
 
 .Contact-Title {
@@ -924,7 +1639,7 @@ footer {
     /* Footer Scope ======================================================================*/
 }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 1024px) and (max-width: 1399px) {
     /* Header Scope ======================================================================*/
     .Nav_links li a {
         font-size: 11px;
@@ -979,12 +1694,25 @@ footer {
     }
 
     .Card-Offer {
-        height: 360px;
-        width: 270px;
-        font-size: 2rem;
+        height: 320px;
+        width: 240px;
+        font-size: 1.8rem;
     }
 
     /* Mission & Vision Scope ======================================================================*/
+    .Mission-HeadTitle {
+        font-size: 2.5rem;
+    }
+
+    .MV-Icon-Select {
+        height: 125px;
+    }
+
+    .Mission-Description, .Vision-Description {
+        font-size: 1.1rem;
+    }
+
+
     .Mission-Vision-Content {
         display: grid;
         justify-content: center;
@@ -1029,7 +1757,7 @@ footer {
 
     /* SHS Courses Scope ======================================================================*/
     #SHS-Strand-Offer {
-        height: 120vh;
+        height: 105vh;
     }
 
     .Strand-DescriptionTitle {
@@ -1068,6 +1796,22 @@ footer {
         font-size: 10px;
     }
     /* Teacher Scope ======================================================================*/
+    .Teachers-HeadTitle {
+        font-size: 2rem;
+    }
+
+    .Teachers-Description {
+        font-size: 0.9rem;
+    }
+    .card-wrapper {
+        margin: 0 100px 35px;
+        padding: 0 10px;
+    }
+
+    .swiper-slide-button {
+        margin: 30px;
+    }
+        
 
     /* Motto Scope ======================================================================*/
     .Motto-Quotes {
@@ -1075,6 +1819,7 @@ footer {
     }
 
     /* ContactUs Scope ======================================================================*/
+
     .Contact-Title {
         font-size: 2rem;
     }
@@ -1091,16 +1836,16 @@ footer {
     }
 
     .Contact-IconTitle {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         width: 20vw;
     }
 
     .Contact-SchoolContact {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 
     .TxtField {
-        width: 40vw;
+        width: 35vw;
     }
 
     .Message-Contact textarea {
@@ -1108,17 +1853,31 @@ footer {
     }
 
     .Contact-SocialsFollow {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     .Socials-Icon {
         height: 40px;
     }
 
+    .Contact-InformationContent1 {
+        margin-bottom: 53px;
+    }
+
     /* Footer Scope ======================================================================*/
+
+    .Nav_links2 li a {
+        font-size: 12px;
+    }
+
+    .Footer-Socials ul li {
+        height: 40px;
+        width: 40px;
+    }
 }
 
-@media (min-width: 1201px) and (max-width: 1600px) {
+
+@media (min-width: 1440px) and (max-width: 1600px) {
     /* Header Scope ======================================================================*/
     .Nav_links li a {
         font-size: 15px;
@@ -1280,7 +2039,7 @@ footer {
 
     /* SHS Courses Scope ======================================================================*/
     #SHS-Strand-Offer {
-        height: 120vh;
+        height: 100vh;
     }
 
     .Strand-DescriptionTitle {
