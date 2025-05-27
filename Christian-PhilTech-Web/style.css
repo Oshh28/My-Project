@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+#head-Nav {
+    position: fixed;
+    background-color: #AD2426;
+    border-bottom: 10px solid rgb(143, 13, 13);
+    width: 100%;
+    z-index: 9999;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.header-Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.Head-Logo {
+    cursor: pointer;
+}
+
+.Head-Logo-Select {
+    height: 60px;
+}
+
+.Nav_links {
+    list-style: none;
+}
+
+.Nav_links li {
+    display: inline-block;
+    padding: 0px 50px;
+}
+
+.Nav_links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease 0s;
+}
+
+.Nav_links li a:hover {
+    color: #ff9023;
+}
+
+/* ======================================== HOMEPAGE ============================================== */
+
+#homePage {
+    background-image: url("./img/WIREFRAME-BGHOMEpng.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    color: white;
+}
+
+.home-Container {
+    margin-left: 140px;
+    padding-top: 180px;
+}
+
+.hTitle {
+    font-size: 4rem;
+    font-weight: 600;
+    color: #EAD7C0;
+}
+
+.missionDescription {
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    padding-right: 750px;
+}
+
+.visionDescription {
+    font-size: 1.2rem;
+    padding-right: 750px;
+}
+
+/* ======================================== ABOUT US PAGE ============================================== */
+
+#aboutUs {
+    background-image: url("./img/WIREFRAME-BGABOUTUS.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    color: white;
+}
+
+.aboutUs-Container {
+    margin-left: 140px;
+    margin-right: 140px;
+    padding-top: 100px;
+}
+
+.aboutusTitle {
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+.aboutusContent-grid {
+    display: grid;
+    justify-content: center;
+    height: 100vh;
+    grid-template-columns: 2fr 1fr ;
+    gap: 8px;
+}
+
+.aboutH2Title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.aboutH5Description {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.774);
+    margin-bottom: 30px;
+}
+
+.imgTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-left: 100px;
+}
+
+.QRCODE-img {
+    height: 400px;
+}
+
+/* ======================================== FACULTY MEMBERS PAGE ============================================== */
+
+#facultyMembers {
+    background-image: url("./img/WIREFRAME2-BGFACULTY.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    color: white;
+}
+
+.facultyTitle {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 800;
+    padding-top: 150px;
+}
+
+.faculty-Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    min-height: 70vh;
+}
+
+.slider-wrapper {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 70px 55px;
+}
+
+.card-list .card-item {
+    color: #fff;
+    user-select: none;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    backdrop-filter: blur(30px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.card-list .card-item .user-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    border: 3px solid #fff;
+    padding: 4px;
+}
+
+.card-list .card-item .user-profession {
+    font-size: 1.15rem;
+    color: #e3e3e3;
+    font-weight: 500;
+    margin: 14px 0 40px;
+}
+
+.card-list .card-item .message-button {
+    font-size: 1.25rem;
+    padding: 10px 35px;
+    color: #030728;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid transparent;
+}
+
+.card-list .card-item .message-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.slider-wrapper .swiper-slide-button {
+    color: #fff;
+    transition: 0.2s ease;
+}
+
+.slider-wrapper .swiper-slide-button:hover {
+    color: #4658ff;
+}
+
+/* ======================================== FACULTY MEMBERS PAGE ============================================== */ 
+
+#courseOffers {
+    background-image: url("./img/WIREFRAME3-BGOFFERS.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    color: white;
+}
+
+.course-Container {
+    margin-left: 140px;
+    margin-right: 140px;
+    padding-top: 100px;
+}
+
+.courseTitle {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.courseDiscount {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #FCF2AE;
+    margin-bottom: 50px;
+}
+
+.courseContent-grid {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-right: 500px;
+    gap: 50px;
+}
+
+.courseLogos {
+    height: 125px;
+}
+
+.courseTitleHead {
+    display: flex;
+    gap: 10px;
+}
+
+.courseName {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.chedCertificate {
+    display: flex;
+    align-items: flex-end;
+    color: #FCF2AE;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.courseMeaning {
+    font-size: 1.2rem;
+}
+
+#strandcourseOffers {
+    background-image: url("./img/WIREFRAME3-BGOFFERS.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    color: white;
+}
+
+.strand-Container {
+    margin-left: 140px;
+    margin-right: 140px;
+    padding-top: 100px;
+}
+
+.strandTitle {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.strandDiscount {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #FCF2AE;
+}
+
+.strandContent-grid {
+    display: grid;
+    grid-template-columns: 1fr 5fr 0fr 2.5fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.logoICT { 
+    grid-area: 2 / 1 / 3 / 2; 
+}
+
+.logoABM {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.logoHUMMS {
+    grid-area: 4 / 1 / 5 / 2;
+}
+
+.strandICT-Box {
+    grid-area: 2 / 2 / 3 / 4;
+}
+
+.strandABM-Box {
+    grid-area: 3 / 2 / 4 / 4;
+}
+
+.strandHUMMS-Box {
+    grid-area: 4 / 2 / 5 / 4;
+}
+
+.SHSTuition {
+    grid-area: 2 / 4 / 5 / 6;
+    background-image: linear-gradient(to right, #FDF2B0, #F9EADB);
+    color: black;
+    padding: 50px;
+}
+
+.strandName {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.strandMeaning {
+    font-size: 1.2rem;
+}
+
+.freeTuition {
+    display: inline-block;
+    font-size: 2.2rem;
+    font-weight: 700;
+    transform: scaleY(1.9);
+}
+
+.inComingG-11 {
+    margin-bottom: 20px;
+    font-size: 0.7rem;
+}
+
+.freeBies {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.weAccept {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.curriculum {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
