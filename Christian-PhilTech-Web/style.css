@@ -63,13 +63,15 @@ html {
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 100vh;
     color: white;
 }
 
 .home-Container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
     margin-left: 140px;
-    padding-top: 180px;
+    padding-top: 250px;
+    padding-bottom: 250px;
 }
 
 .hTitle {
@@ -81,24 +83,22 @@ html {
 .missionDescription {
     font-size: 1.2rem;
     margin-bottom: 50px;
-    padding-right: 750px;
 }
 
 .visionDescription {
     font-size: 1.2rem;
-    padding-right: 750px;
 }
 
 /* ======================================== ABOUT US PAGE ============================================== */
 
 #aboutUs {
-    background-image: url("./img/WIREFRAME-BGABOUTUS.png");
+    /*background-image: url("./img/WIREFRAME-BGABOUTUS.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center;*/
+    background-color: #ffdbdbb4;
     width: 100%;
-    height: 100vh;
-    color: white;
+    color: black;
 }
 
 .aboutUs-Container {
@@ -109,6 +109,7 @@ html {
 
 .aboutusTitle {
     font-size: 4rem;
+    color: #AD2426;
     text-align: center;
     font-weight: 800;
     margin-bottom: 50px;
@@ -117,23 +118,25 @@ html {
 .aboutusContent-grid {
     display: grid;
     justify-content: center;
-    height: 100vh;
     grid-template-columns: 2fr 1fr ;
+    padding-bottom: 100px;
     gap: 8px;
 }
 
 .aboutH2Title {
     font-size: 2rem;
+    color: #AD2426;
     font-weight: 600;
 }
 
 .aboutH5Description {
     font-size: 1.3rem;
-    color: rgba(255, 255, 255, 0.774);
+    color: black;
     margin-bottom: 30px;
 }
 
 .imgTitle {
+    color: black;
     font-size: 1.2rem;
     font-weight: 600;
     margin-left: 100px;
@@ -143,6 +146,28 @@ html {
     height: 400px;
 }
 
+.aboutHymn-Grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#philtech-Hymn {
+    background-color: #FFDBDB;
+    text-align: center;
+}
+
+.aboutHymn-Title {
+    font-size: 4rem;
+    color: #AD2426;
+    font-weight: 800;
+    margin-bottom: 30px;
+    padding-top: 100px;
+}
+
+.aboutHymn-Lyrics {
+    font-size: 1.5rem;
+    padding-bottom: 100px;
+}
 /* ======================================== FACULTY MEMBERS PAGE ============================================== */
 
 #facultyMembers {
@@ -203,10 +228,10 @@ html {
     font-size: 1.15rem;
     color: #e3e3e3;
     font-weight: 500;
-    margin: 14px 0 40px;
+    margin: 14px 0 130px;
 }
 
-.card-list .card-item .message-button {
+/*.card-list .card-item .message-button {
     font-size: 1.25rem;
     padding: 10px 35px;
     color: #030728;
@@ -215,7 +240,7 @@ html {
     cursor: pointer;
     background: #fff;
     border: 1px solid transparent;
-}
+}*/
 
 .card-list .card-item .message-button:hover {
     background: rgba(255, 255, 255, 0.1);
@@ -235,12 +260,12 @@ html {
 /* ======================================== FACULTY MEMBERS PAGE ============================================== */ 
 
 #courseOffers {
-    background-image: url("./img/WIREFRAME3-BGOFFERS.png");
+    /*background-image: url("./img/WIREFRAME3-BGOFFERS.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center;*/
+    background-color: #FFDBDB;
     width: 100%;
-    height: 100vh;
     color: white;
 }
 
@@ -248,19 +273,21 @@ html {
     margin-left: 140px;
     margin-right: 140px;
     padding-top: 100px;
+    color: black;
 }
 
 .courseTitle {
     text-align: center;
     font-size: 4rem;
     font-weight: 800;
+    color: #AD2426;
 }
 
 .courseDiscount {
     text-align: center;
     font-size: 1.7rem;
     font-weight: 600;
-    color: #FCF2AE;
+    color: #FF9B45;
     margin-bottom: 50px;
 }
 
@@ -269,6 +296,7 @@ html {
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 1fr 1fr;
     margin-right: 500px;
+    padding-bottom: 150px;
     gap: 50px;
 }
 
@@ -278,6 +306,7 @@ html {
 
 .courseTitleHead {
     display: flex;
+    color: #AD2426;
     gap: 10px;
 }
 
@@ -289,7 +318,7 @@ html {
 .chedCertificate {
     display: flex;
     align-items: flex-end;
-    color: #FCF2AE;
+    color: #FF9B45;
     font-size: 1.1rem;
     margin-bottom: 10px;
     font-weight: 600;
@@ -300,32 +329,34 @@ html {
 }
 
 #strandcourseOffers {
-    background-image: url("./img/WIREFRAME3-BGOFFERS.png");
+    /*background-image: url("./img/WIREFRAME3-BGOFFERS.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center;*/
+    background-color: #ffdbdbb4;
     width: 100%;
-    height: 100vh;
-    color: white;
+    color: black;
 }
 
 .strand-Container {
     margin-left: 140px;
     margin-right: 140px;
     padding-top: 100px;
+    padding-bottom: 600px;
 }
 
 .strandTitle {
     text-align: center;
     font-size: 4rem;
     font-weight: 800;
+    color: #AD2426;
 }
 
 .strandDiscount {
     text-align: center;
     font-size: 1.3rem;
     font-weight: 600;
-    color: #FCF2AE;
+    color: #FF9B45;
 }
 
 .strandContent-grid {
@@ -364,13 +395,12 @@ html {
 
 .SHSTuition {
     grid-area: 2 / 4 / 5 / 6;
-    background-image: linear-gradient(to right, #FDF2B0, #F9EADB);
     color: black;
-    padding: 50px;
 }
 
 .strandName {
     font-size: 2.5rem;
+    color: #AD2426;
     font-weight: 600;
 }
 
@@ -383,6 +413,7 @@ html {
     font-size: 2.2rem;
     font-weight: 700;
     transform: scaleY(1.9);
+    color: #AD2426;
 }
 
 .inComingG-11 {
@@ -405,4 +436,29 @@ html {
     font-size: 1.2rem;
     font-weight: 800;
     margin-bottom: 20px;
+}
+
+/* ======================================== FOOTER PAGE ============================================== */ 
+#footer {
+    background-color: black;
+    width: 100%;
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.footer-rights {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.footer-motto {
+    font-weight: 600;
 }
