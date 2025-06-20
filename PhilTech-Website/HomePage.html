@@ -17,10 +17,11 @@
 </head>
 <body>
    <header id="navbar">
-        <!-- This section displays the user's profile -->
-         <div class="Header-Content">
+        <div class="Header-Content">
             <a href="HomePage.html">
-                <div class="Head-Logo"><img src="./Images/PhilTech-Logo-Header.png" class="Head-Logo-Select" alt=""></div>
+                <div class="Head-Logo">
+                    <img src="./Images/PhilTech-Logo-Header.png" class="Head-Logo-Select" alt="PhilTech Logo">
+                </div>
             </a>
             <nav>
                 <ul class="Nav_links">
@@ -31,17 +32,75 @@
                     <li class="Nav"><a href="ContactPage.html">Contact</a></li>
                 </ul>
             </nav>
-            <a class="bsu" href="https://www.facebook.com/share/p/16RXcH2Cbb/"><button class="btn-NavEnroll">
-                Apply Now
-                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                        fill-rule="evenodd"
-                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                        clip-rule="evenodd"
-                    ></path>
-                </svg></button></a>
+            <a class="bsu" href="https://www.facebook.com/share/p/16RXcH2Cbb/">
+                <button class="btn-NavEnroll">
+                    Apply Now
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            fill-rule="evenodd"
+                            d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                            clip-rule="evenodd"
+                        ></path>
+                    </svg>
+                </button>
+            </a>
         </div>
     </header>
+
+    <section id="bot-navbar">
+        <nav class="bnav">
+            <button class="bnav-close" id="closeBottomNav">×</button>
+            <ul class="bnav-list">
+                <li>
+                    <a href="#Home-Page" class="bnav-link">
+                        <i class="ri-home-smile-2-line"></i>
+                        <div class="bnav-title">Home</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Special-Offer" class="bnav-link">
+                        <i class="ri-price-tag-3-line"></i>
+                        <div class="bnav-title">Promo</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Mission-Vision" class="bnav-link">
+                        <i class="ri-focus-2-line"></i>
+                        <div class="bnav-title">M&V</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#College-Courses-Offer" class="bnav-link">
+                        <i class="ri-book-shelf-line"></i>
+                        <div class="bnav-title">Course</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Teachers" class="bnav-link">
+                        <i class="ri-user-2-line"></i>
+                        <div class="bnav-title">Staff</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Campus" class="bnav-link">
+                        <i class="ri-school-line"></i>
+                        <div class="bnav-title">Campus</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#Contact-Us" class="bnav-link">
+                        <i class="ri-contacts-line"></i>
+                        <div class="bnav-title">Contact</div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Toggle Button to Show Bottom Navbar -->
+    <button class="bnav-toggle" id="toggleBottomNav">
+        <i class="ri-menu-line"></i>
+    </button>
 
     <section id="Home-Page">
         <!-- This section displays the Home Page -->
@@ -296,12 +355,9 @@
         <!-- This section displays the College Courses -->
         <div class="College-Courses-Content">
             <div class="HeadTitle-Container">
-                <div class="Courses-HeadTitle">College Courses Offers</div>
+                <div class="Courses-HeadTitle">Courses We Offer</div>
                 <div class="Courses-TitleDescription">
-                <p>Explore a wide range of college programs designed to equip you with the skills 
-                    and knowledge for a successful future. Whether you're aiming for 
-                    business, technology, healthcare, or education, we have the right course for 
-                    you. Start your journey with us and turn your passion into a profession!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum nulla eligendi sunt enim voluptatem, autem animi dicta debitis praesentium nihil sed dolorem.</p>
                 </div>
             </div>
             <div class="Courses-Offers">
@@ -343,14 +399,9 @@
         <div class="SHS-Strand-Content">
             <div class="Strand-ContainerTitle">
                 <div class="Strand-DescriptionTitle">
-                    <p>Explore the diverse Senior High School strands that will guide you 
-                        towards your future career! Whether you are interested in technology, 
-                        business, healthcare, or humanities, we have the right strand for you. 
-                        Each strand is designed to equip you with specialized skills and 
-                        knowledge to help you succeed in your chosen path. Start your SHS 
-                        journey with us and turn your passion into a profession!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quaerat aperiam exercitationem corrupti provident incidunt sit, quas porro minima tempore earum.</p>
                 </div>
-                <div class="Strand-HeadTitle">SHS Strand Offer</div>
+                <div class="Strand-HeadTitle">Senior Highschool Strand</div>
             </div>
             <div class="Strand-Offers">
                 <div class="Strand ICT">
@@ -515,7 +566,7 @@
 
     <section id="Campus">
         <div class="campus-title"><span style="color: #AD2426;">Our Campus Branches</span> </div>
-        <div class="campus-description"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></div>
+        <div class="campus-description"><p><span style="color: #666;">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span></p></div>
 
         <div class="row">
             <div class="campus-col">
@@ -552,25 +603,25 @@
 
     <section id="Facilities">
         <div class="campus-title"><span style="color: #AD2426;">Our Facilities</span></div>
-        <div class="campus-description"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></div>
+        <div class="campus-description"><p><span style="color: #666;">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span></p></div>
 
         <div class="row">
             <div class="facilities-col">
                 <img src="./Images/Branches/Library.png">
                 <h3>Library</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ea nulla.</p>
+                <p><span style="color: #666;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ea nulla.</span></p>
             </div>
 
             <div class="facilities-col">
                 <img src="./Images/Branches/ComLab.png">
                 <h3>Computer Laboratory</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ea nulla.</p>
+                <p><span style="color: #666;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ea nulla.</span></p>
             </div>
 
             <div class="facilities-col">
                 <img src="./Images/Branches/FBS Lab.png">
                 <h3>FBS Laboratory</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ea nulla.</p>
+                <p><span style="color: #666;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ea nulla.</span></p>
             </div>
         </div>
     </section>
