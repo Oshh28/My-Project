@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhilTech-GMA</title>
+    <link rel="icon" type="image/png" href="./Images/PhilTech-Web-Icon.png">
+    <link rel="stylesheet" href="contactStyle.css">
+    <script src="https://kit.fontawesome.com/8b526527c7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="navbar">
+        <!-- This section displays the user's profile -->
+         <div class="Header-Content">
+            <a href="HomePage.html">
+                <div class="Head-Logo"><img src="./Images/PhilTech-Logo-Header.png" class="Head-Logo-Select" alt=""></div>
+            </a>
+            <nav>
+                <ul class="Nav_links">
+                    <li class="Nav"><a href="HomePage.html">Home</a></li>
+                    <li class="Nav"><a href="AboutUsPage.html">About Us</a></li>
+                    <li class="Nav"><a href="CoursesPage.html">Courses</a></li>
+                    <li class="Nav"><a href="FacultyPage.html">Faculty</a></li>
+                    <li class="Nav"><a href="ContactPage.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a class="bsu" href="https://www.facebook.com/share/p/16RXcH2Cbb/"><button class="btn-NavEnroll">
+                Apply Now
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        fill-rule="evenodd"
+                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                        clip-rule="evenodd"
+                    ></path>
+                </svg></button></a>
+        </div>
+    </header>
+
+    <section id="AboutUs-Home">
+        <div class="AHome-Title">Contact Us</div>
+    </section>
+
+    <section id="Contact-Us">
+        <!-- This section displays the Get in Touch -->
+         <div class="Contact-Container">
+            <div class="Contact-Content">
+                <div class="Contact-GetInTouch">
+                    <div class="Contact-HeadTitle">Get In <span style="color: #AD2426;">Touch</span></div>
+                    <form action="https://api.web3forms.com/submit" method="POST" class="Contact-GetInTouch" onsubmit="showToast(successMsg); return false;">
+
+                        <input type="hidden" name="access_key" value="7548ff1a-e0be-4a38-8423-f3fb8c8f9763">
+
+                        <input type="hidden" name="from_name" value="Website Contact Form">
+                        <div class="Email-Contact TxtField">
+                            <input type="email" name="email" placeholder=" " required>
+                            <label>Email:</label>
+                        </div>
+                        <div class="Subject-Contact TxtField">
+                            <input type="text" name="subject" placeholder=" " required>
+                            <label>Subject:</label>
+                        </div>
+                        <div class="Message-Contact TxtField">
+                            <textarea name="message" placeholder=" " required></textarea>
+                            <label>Message:</label>
+                        </div>
+                        <div class="btn-sbmt">
+                            <button type="submit">
+                                <div class="svg-wrapper-1">
+                                    <div class="svg-wrapper">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <span>Submit</span>
+                            </button> 
+                        </div>
+
+                        <div id="toastBox"></div>
+                    </form>
+                </div>
+                <div class="Contact-ContactUs">
+                    <div class="Contact-Title">Contact Us</div>
+                    <div class="Contact-Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                        ex ea commodo consequat.</div>
+                    <div class="Contact-InformationContent1">
+                        <div class="Contact-CallUs">
+                            <div class="Contact-Icons"><img src="./Images/Contact Us Images/phone-call.png" class="Contact-Icon" alt=""></div>
+                            <div class="Contact-IconTitle">Call Us</div>
+                            <div class="Contact-SchoolContact">+63 97-224-0222</div>
+                        </div>
+                        <div class="Contact-EmailUs">
+                            <div class="Contact-Icons"><img src="./Images/Contact Us Images/email.png" class="Contact-Icon" alt=""></div>
+                            <div class="Contact-IconTitle">Email Us</div>
+                            <div class="Contact-SchoolContact">philtechgma@gmail.com</div>
+                        </div>
+                    </div> 
+                    <div class="Contact-InformationContent2">
+                        <div class="Contact-Website">
+                            <div class="Contact-Icons"><img src="./Images/Contact Us Images/world-wide-web.png" class="Contact-Icon" alt=""></div>
+                            <div class="Contact-IconTitle">Our Website</div>
+                            <div class="Contact-SchoolContact">www.philtechgma.com</div>
+                        </div>
+                        <div class="Contact-Locations">
+                            <div class="Contact-Icons"><img src="./Images/Contact Us Images/location.png" class="Contact-Icon" alt=""></div>
+                            <div class="Contact-IconTitle">Locations</div>
+                            <div class="Contact-SchoolContact">2nd Floor, CRDM Governors Drive
+                                Brgy, Maderan G.M.A Cavite.</div>
+                        </div>
+                    </div>
+                    <div class="Contact-SocialsContent">
+                        <div class="Contact-SocialsFollow">Follow Us On</div>
+                        <div class="Contact-Socials">
+                            <div class="Contact-Facebook">
+                                <a href="https://www.facebook.com/philtech.2013gma"><img src="./Images/Contact Us Images/facebook.png" class="Socials-Icon" alt=""></a>
+                            </div>
+                            <div class="Contact-Instagram">
+                                <a href="https://www.instagram.com/gmaphiltech/"><img src="./Images/Contact Us Images/instagram.png" class="Socials-Icon" alt=""></a>
+                            </div>
+                            <div class="Contact-Youtube">
+                                <a href="https://www.youtube.com/@philtechgma7586"><img src="./Images/Contact Us Images/youtube.png" class="Socials-Icon" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <iframe class="Contact-gmaps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3866.4763306045306!2d120.9965204757617!3d14.28373428475456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d604cb43d9bf%3A0x52511a523c76345!2sPhiltech!5e0!3m2!1sen!2sph!4v1750344807608!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </div>
+    </section>
+
+    <section id="Devloper-Container" class="BgDev-Popup">
+        <div class="PopDev-Box">
+            <div class="PopDev-Cover"></div>
+            <div class="PopDev-Container">
+                <div id="Close4" class="PopDev-Closer4">+</div>
+                <div class="PopDev-Profile-Box">
+                    <img src="./Images/Developer Images/Developer Profile.png" class="PopDev-Profile" alt="">
+                    <div class="PopDev-Name">
+                        <div>Chrizyruze Rosal</div>
+                        <div class="PopDev-Badge">
+                            <div>< dev ></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="PopDev-Contact-Bg">
+                    <div class="PopDev-Email-Grid">
+                        <div class="Dev-Box1">
+                            <div class="PopDev-CApp">Email:</div>
+                            <div class="PopDev-CAccount">🡥 chrizyruze@gmail.com</div>
+                        </div>
+                        <div class="Dev-Box2">
+                            <div class="Dev-Logo-Bg">
+                                <img src="./Images/Developer Images/Email-Dev.png" class="Dev-Account-Logo" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="PopDev-Number-Grid">
+                        <div class="Dev-Box1">
+                            <div class="PopDev-CApp">Phone Number:</div>
+                            <div class="PopDev-CAccount">🡥 +63-994-771-0973</div>
+                        </div>
+                        <div class="Dev-Box2">
+                            <div class="Dev-Logo-Bg">
+                                <img src="./Images/Developer Images/Phone-Dev.png" class="Dev-Account-Logo" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="PopDev-Facebook-Grid">
+                        <div class="Dev-Box1">
+                            <div class="PopDev-CApp">Facebook:</div>
+                            <div class="PopDev-CAccount">🡥 facebook.com/chrisbano28/</div>
+                        </div>
+                        <div class="Dev-Box2">
+                            <div class="Dev-Logo-Bg">
+                                <img src="./Images/Developer Images/Facebook-Dev.png" class="Dev-Account-Logo" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="PopDev-Instagram-Grid">
+                        <div class="Dev-Box1">
+                            <div class="PopDev-CApp">Instagram:</div>
+                            <div class="PopDev-CAccount">🡥 instagram.com/krezzx_7/</div>
+                        </div>
+                        <div class="Dev-Box2">
+                            <div class="Dev-Logo-Bg">
+                                <img src="./Images/Developer Images/Instagram-Dev.png" class="Dev-Account-Logo" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="PopDev-Telegram-Grid">
+                        <div class="Dev-Box1">
+                            <div class="PopDev-CApp">Telegram:</div>
+                            <div class="PopDev-CAccount">🡥 @krezzq</div>
+                        </div>
+                        <div class="Dev-Box2">
+                            <div class="Dev-Logo-Bg">
+                                <img src="./Images/Developer Images/Telegram-Devv.png" class="Dev-Account-Logo" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <!-- This section displays the Footer of the website -->
+         <div class="Footer-Container">
+            <div class="Footer-SchoolName">PHILTECH</div>
+            <div class="Footer-SchoolMotto">Global Success Through Academic Excellence</div>
+            <div class="Footer-Navigation">
+                <ul class="Nav_links2">
+                    <li class="Nav2"><a href="HomePage.html" id="">HOME</a></li>
+                    <li class="Nav2"><a href="AboutUsPage.html" id="">ABOUT US</a></li>
+                    <li class="Nav2"><a href="CoursesPage.html" id="">COURSES</a></li>
+                    <li class="Nav2"><a href="FacultyPage.html" id="">FACULTY</a></li>
+                    <li class="Nav2"><a href="ContactPage.html" id="">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="Footer-Socials">
+                <ul>
+                    <li><a href="https://www.facebook.com/philtechgma2013"><i class="fa-brands fa-facebook-f"></i></a></i></li>
+                    <li><a href="https://www.instagram.com/gmaphiltech/"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.youtube.com/@philtechgma7586"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="Footer-Certificate"><span style="color: rgba(255, 255, 255, 0.548);">© 2025 PhilTech. All Rights Reserved.</span></div>
+            <div class="Footer-Description"><span style="color: rgba(255, 255, 255, 0.548);">Designed and Developed with care <a href="#" id="DEVELOPER-Button" class="DEVELOPER-Button">🡥 Contact the Developers</a></span></div>
+         </div>
+    </footer>
+    <script src="contactScript.js"></script>
+</body>
+</html>
