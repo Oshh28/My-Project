@@ -1,3 +1,15 @@
+ let lastScrollTop = 0;
+ navbar = document.getElementById("navbar");
+ window.addEventListener("scroll", function(){
+    let scrollTop = window.pageXOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop){
+      navbar.classList.add("active");
+    } else {
+      navbar.classList.remove("active");
+    }
+    lastScrollTop = scrollTop;
+ })
+
   const popOutButton = document.getElementById("SHS-Button");
   const popOutButton2 = document.getElementById("COLLEGE-Button");
   const popOutButton3 = document.getElementById("SUNDAY-Button");
