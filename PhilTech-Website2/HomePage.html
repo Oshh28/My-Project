@@ -12,21 +12,23 @@
     <link rel="stylesheet" href="HomeStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
     <script src="https://kit.fontawesome.com/8b526527c7.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header id="Header">
+   <header id="navbar">
         <!-- This section displays the user's profile -->
          <div class="Header-Content">
-            <div class="Head-Logo"><a href="#Home-Page"><img src="./Images/PhilTech-Logo-Header.png" class="Head-Logo-Select" alt=""></a></div>
+            <a href="HomePage.html">
+                <div class="Head-Logo"><img src="./Images/PhilTech-Logo-Header.png" class="Head-Logo-Select" alt=""></div>
+            </a>
             <nav>
                 <ul class="Nav_links">
                     <li class="Nav"><a href="#Home-Page">Home</a></li>
-                    <li class="Nav"><a href="#Special-Offer">Special Offers</a></li>
-                    <li class="Nav"><a href="#Mission-Vision">Mission & Vision</a></li>
-                    <li class="Nav"><a href="#College-Courses-Offer">Courses</a></li>
-                    <li class="Nav"><a href="#Teachers">Teacher's</a></li>
-                    <li class="Nav"><a href="#Contact-Us">Contact Us</a></li>
+                    <li class="Nav"><a href="AboutUsPage.html">About Us</a></li>
+                    <li class="Nav"><a href="CoursesPage.html">Courses</a></li>
+                    <li class="Nav"><a href="FacultyPage.html">Faculty</a></li>
+                    <li class="Nav"><a href="ContactPage.html">Contact</a></li>
                 </ul>
             </nav>
             <a class="bsu" href="https://www.facebook.com/share/p/16RXcH2Cbb/"><button class="btn-NavEnroll">
@@ -50,7 +52,7 @@
                 <p>Your gateway to learning, innovation, and opportunity at PhilTech. Connect, access <br> 
                 resources, and unlock your full potential on your journey to success.</p></div>
             <div>
-                <a style="--clr: #000" class="btn-3" href="AboutUsPage.html">
+                <a style="--clr: #000" class="btn-3" href="#Special-Offer">
                 <span class="button__icon-wrapper">
                 <svg
                     width="10"
@@ -233,23 +235,26 @@
             <div class="Card-Offers">
                 <div class="SHS Card-Offer">
                     <a href="#" id="SHS-Button" class="SHS-Button">
-                        <div class="CardBg-Logo"><img src="./Images/Special Offer Images/philtecht_logo_w_text.png" height="80px" width="80px" alt=""></div>
-                        <div class="Card-Title">SENIOR HIGH SCHOOL</div>
-                        <div class="Card-Overlay"><img src="./Images/Special Offer Images/eye-icon.png" alt="view" class="eye-icon"></div>
+                        <img src="./Images/Special Offer Images/Senior-High-Card.png" alt="">
+                        <div class="Card-Overlay">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
                     </a>
                 </div>
                 <div class="SUNDAY Card-Offer">
                     <a href="#" id="SUNDAY-Button" class="SUNDAY-Button">
-                        <div class="CardBg-Logo"><img src="./Images/Special Offer Images/philtecht_logo_w_text.png" height="80px" width="80px" alt=""></div>
-                        <div class="Card-Title">SUNDAY CLASS</div>
-                        <div class="Card-Overlay"><img src="./Images/Special Offer Images/eye-icon.png" alt="view" class="eye-icon"></div>
+                        <img src="./Images/Special Offer Images/Sunday-Class-Card.png" alt="">
+                        <div class="Card-Overlay">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
                     </a>
                 </div>
                 <div class="COLLEGE Card-Offer">
                     <a href="#" id="COLLEGE-Button" class="COLLEGE-Button">
-                        <div class="CardBg-Logo"><img src="./Images/Special Offer Images/philtecht_logo_w_text.png" height="80px" width="80px" alt=""></div>
-                        <div class="Card-Title">COLLEGE DEPARTMENT</div>
-                        <div class="Card-Overlay"><img src="./Images/Special Offer Images/eye-icon.png" alt="view" class="eye-icon"></div>
+                        <img src="./Images/Special Offer Images/College-Depart-Cover.png" alt="">
+                        <div class="Card-Overlay">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -273,7 +278,7 @@
 
                     <div class="Vision-Icon"><img src="./Images/Mission&Vision  Images/Vision-Icon2.png" class="MV-Icon-Select" height="150" alt="Vision"></div>
                     <div class="Vision-Title">Vision</div>
-                    <div class="Vision-Description">
+                    <div class="Vision-Description1">
                         <p>Philippine Technological Institute of Science, Arts and Trade, Inc. 
                             (PHILTECH) shall emerge as the only technical school in the 
                             Philippines that can provide academic excellence, appropriate 
@@ -289,7 +294,7 @@
 
     <section id="College-Courses-Offer">
         <!-- This section displays the College Courses -->
-         <div class="College-Courses-Content">
+        <div class="College-Courses-Content">
             <div class="HeadTitle-Container">
                 <div class="Courses-HeadTitle">College Courses Offers</div>
                 <div class="Courses-TitleDescription">
@@ -334,7 +339,8 @@
 
     <section id="SHS-Strand-Offer">
         <!-- This section displays the SHS Strand -->
-         <div class="SHS-Strand-Content">
+         
+        <div class="SHS-Strand-Content">
             <div class="Strand-ContainerTitle">
                 <div class="Strand-DescriptionTitle">
                     <p>Explore the diverse Senior High School strands that will guide you 
@@ -405,7 +411,7 @@
                                 <img src="./Images/Teachers Image/maamacerno.jpg" alt="Card Image" class="card-image">
                                 <p class="badge">Guidance</p>
                                 <h3 class="card-name">Ms. Kim Arceño</h3>
-                                <button class="card-button material-symbols-outlined">arrow_forward</button>
+                                <p class="subject-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </a>
                     </li>
                     <li class="card-item swiper-slide">
@@ -413,7 +419,7 @@
                                 <img src="./Images/Teachers Image/maammagno.jpg" alt="Card Image" class="card-image">
                                 <p class="badge PDEV">PDEV</p>
                                 <h3 class="card-name">Ms. Joy Magno</h3>
-                                <button class="card-button material-symbols-outlined">arrow_forward</button>
+                                <p class="subject-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </a>
                     </li>
                     <li class="card-item swiper-slide">
@@ -421,7 +427,7 @@
                                 <img src="./Images/Teachers Image/maamrivera.jpg" alt="Card Image" class="card-image">
                                 <p class="badge English">English & Research</p>
                                 <h3 class="card-name">Ms. Grace Rivera</h3>
-                                <button class="card-button material-symbols-outlined">arrow_forward</button>
+                                <p class="subject-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </a>
                     </li>
                     <li class="card-item swiper-slide">
@@ -429,7 +435,7 @@
                                 <img src="./Images/Teachers Image/maamyabut.jpg" alt="Card Image" class="card-image">
                                 <p class="badge Filipino">Filipino</p>
                                 <h3 class="card-name">Ms. Edith Yabut</h3>
-                                <button class="card-button material-symbols-outlined">arrow_forward</button>
+                                <p class="subject-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </a>
                     </li>
                     <li class="card-item swiper-slide">
@@ -437,7 +443,7 @@
                                 <img src="./Images/Teachers Image/sirpats.jpg" alt="Card Image" class="card-image">
                                 <p class="badge Programming">Programming</p>
                                 <h3 class="card-name">Mr. Jun Patalen</h3>
-                                <button class="card-button material-symbols-outlined">arrow_forward</button>
+                                <p class="subject-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </a>
                     </li>
                     <li class="card-item swiper-slide">
@@ -445,7 +451,7 @@
                                 <img src="./Images/Teachers Image/raniel.jpg" alt="Card Image" class="card-image">
                                 <p class="badge Filipino">Filipino</p>
                                 <h3 class="card-name">Mr. Raniel Gordon</h3>
-                                <button class="card-button material-symbols-outlined">arrow_forward</button>
+                                <p class="subject-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </a>
                     </li>
                     <li class="card-item swiper-slide">
@@ -453,7 +459,7 @@
                                 <img src="./Images/Teachers Image/siratienza.jpg" alt="Card Image" class="card-image">
                                 <p class="badge PE">PE & PathFit</p>
                                 <h3 class="card-name">Mr. Michael Atienza</h3>
-                                <button class="card-button material-symbols-outlined">arrow_forward</button>
+                                <p class="subject-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </a>
                     </li>
                     <li class="card-item swiper-slide">
@@ -461,7 +467,7 @@
                                 <img src="./Images/Teachers Image/sirf.jpg" alt="Card Image" class="card-image">
                                 <p class="badge Research">Practical Research</p>
                                 <h3 class="card-name">Mr. Ephraim Icabande</h3>
-                                <button class="card-button material-symbols-outlined">arrow_forward</button>
+                                <p class="subject-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </a>
                     </li>
                     <li class="card-item swiper-slide">
@@ -469,7 +475,7 @@
                                 <img src="./Images/Teachers Image/sirgerald.jpg" alt="Card Image" class="card-image">
                                 <p class="badge Research">Practical Research</p>
                                 <h3 class="card-name">Mr. Gerald Curtan Ello</h3>
-                                <button class="card-button material-symbols-outlined">arrow_forward</button>
+                                <p class="subject-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </a>
                     </li>
                     <li class="card-item swiper-slide">
@@ -477,7 +483,7 @@
                                 <img src="./Images/Teachers Image/sirjude.jpg" alt="Card Image" class="card-image">
                                 <p class="badge Math">Mathematics</p>
                                 <h3 class="card-name">Mr. Jude Rodriguez</h3>
-                                <button class="card-button material-symbols-outlined">arrow_forward</button>
+                                <p class="subject-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </a>
                     </li>
                     <li class="card-item swiper-slide">
@@ -485,7 +491,7 @@
                                 <img src="./Images/Teachers Image/sirnori.jpg" alt="Card Image" class="card-image">
                                 <p class="badge English">English & RPH</p>
                                 <h3 class="card-name">Mr. Lacerna Nori</h3>
-                                <button class="card-button material-symbols-outlined">arrow_forward</button>
+                                <p class="subject-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </a>
                     </li>
                     <li class="card-item swiper-slide">
@@ -493,7 +499,7 @@
                                 <img src="./Images/Teachers Image/sirraiven.jpg" alt="Card Image" class="card-image">
                                 <p class="badge Graphics">Graphics & Programming</p>
                                 <h3 class="card-name">Mr. Raiven Gordon</h3>
-                                <button class="card-button material-symbols-outlined">arrow_forward</button>
+                                <p class="subject-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </a>
                     </li>
                 </ul>
@@ -507,6 +513,59 @@
          </div>
     </section>
 
+    <section id="Campus">
+        <div class="campus-title"><span style="color: #AD2426;">Our Campus Branches</span> </div>
+        <div class="campus-description"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></div>
+
+        <div class="row">
+            <div class="campus-col">
+                <img src="./Images/Branches/PhilTech-GMA-Cavite.png">
+                <div class="campus-layer">
+                    <h3>GMA <br>CAVITE</h3>
+                </div>
+            </div>
+
+            <div class="campus-col">
+                <img src="./Images/Branches/PhilTech-Tanay-Rizal.png">
+                <div class="campus-layer">
+                    <h3>TANAY <br>RIZAL</h3>
+                </div>
+            </div>
+
+            <div class="campus-col">
+                <img src="./Images/Branches/PhilTech-SantaRosa-Laguna.png">
+                <div class="campus-layer">
+                    <h3>SANTA ROSA <br>LAGUNA</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Facilities">
+        <div class="campus-title"><span style="color: #AD2426;">Our Facilities</span></div>
+        <div class="campus-description"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></div>
+
+        <div class="row">
+            <div class="facilities-col">
+                <img src="./Images/Branches/Library.png">
+                <h3>Library</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ea nulla.</p>
+            </div>
+
+            <div class="facilities-col">
+                <img src="./Images/Branches/ComLab.png">
+                <h3>Computer Laboratory</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ea nulla.</p>
+            </div>
+
+            <div class="facilities-col">
+                <img src="./Images/Branches/FBS Lab.png">
+                <h3>FBS Laboratory</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ea nulla.</p>
+            </div>
+        </div>
+    </section>
+
     <section id="PhilTech-Motto">
         <!-- This section displays the Motto -->
          <div class="Motto-Content">
@@ -518,16 +577,20 @@
     <section id="Contact-Us">
         <!-- This section displays the Get in Touch -->
          <div class="Contact-Container">
-            <div class="Contact-HeadTitle">Get In <span style="color: #AD2426;">Touch</span></div>
             <div class="Contact-Content">
                 <div class="Contact-GetInTouch">
-                    <form class="Contact-GetInTouch" onsubmit="showToast(successMsg); return false;">
+                    <div class="Contact-HeadTitle">Get In <span style="color: #AD2426;">Touch</span></div>
+                    <form action="https://api.web3forms.com/submit" method="POST" class="Contact-GetInTouch" onsubmit="showToast(successMsg); return false;">
+
+                        <input type="hidden" name="access_key" value="7548ff1a-e0be-4a38-8423-f3fb8c8f9763">
+
+                        <input type="hidden" name="from_name" value="Website Contact Form">
                         <div class="Email-Contact TxtField">
-                            <input type="email" placeholder=" " required>
+                            <input type="email" name="email" placeholder=" " required>
                             <label>Email:</label>
                         </div>
                         <div class="Subject-Contact TxtField">
-                            <input type="text" placeholder=" " required>
+                            <input type="text" name="subject" placeholder=" " required>
                             <label>Subject:</label>
                         </div>
                         <div class="Message-Contact TxtField">
@@ -686,15 +749,14 @@
         <!-- This section displays the Footer of the website -->
          <div class="Footer-Container">
             <div class="Footer-SchoolName">PHILTECH</div>
-            <div class="Footer-SchoolMotto">Global sucess through academic excellence</div>
+            <div class="Footer-SchoolMotto">Global success through academic excellence</div>
             <div class="Footer-Navigation">
                 <ul class="Nav_links2">
-                    <li class="Nav2"><a href="#Home-Page" id="">HOME</a></li>
-                    <li class="Nav2"><a href="#Special-Offer" id="">SPECIAL OFFERS</a></li>
-                    <li class="Nav2"><a href="#Mission-Vision" id="">MISSION & VISION</a></li>
-                    <li class="Nav2"><a href="#College-Courses-Offer" id="">COURSES</a></li>
-                    <li class="Nav2"><a href="#Teachers" id="">TEACHERS</a></li>
-                    <li class="Nav2"><a href="#Contact-Us" id="">CONTACT</a></li>
+                    <li class="Nav2"><a href="HomePage.html" id="">HOME</a></li>
+                    <li class="Nav2"><a href="AboutUsPage.html" id="">ABOUT US</a></li>
+                    <li class="Nav2"><a href="CoursesPage.html" id="">COURSES</a></li>
+                    <li class="Nav2"><a href="FacultyPage.html" id="">FACULTY</a></li>
+                    <li class="Nav2"><a href="ContactPage.html" id="">CONTACT</a></li>
                 </ul>
             </div>
             <div class="Footer-Socials">
