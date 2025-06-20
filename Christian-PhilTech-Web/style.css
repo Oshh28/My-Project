@@ -204,7 +204,8 @@ html {
 .card-list .card-item {
     color: #fff;
     user-select: none;
-    padding: 35px;
+    padding: 25px;
+    height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -216,10 +217,10 @@ html {
 }
 
 .card-list .card-item .user-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 40px;
+    width: 100%;
+    aspect-ratio: 4 / 4.5;
+    margin-bottom: 15px;
+    margin-top: 130px;
     border: 3px solid #fff;
     padding: 4px;
 }
@@ -271,14 +272,13 @@ html {
 
 .course-Container {
     margin-left: 140px;
-    margin-right: 140px;
     padding-top: 100px;
     color: black;
 }
 
 .courseTitle {
     text-align: center;
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 800;
     color: #AD2426;
 }
@@ -293,15 +293,15 @@ html {
 
 .courseContent-grid {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 0fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    margin-right: 500px;
+    margin-right: 140px;
     padding-bottom: 150px;
     gap: 50px;
 }
 
 .courseLogos {
-    height: 125px;
+    height: 200px;
 }
 
 .courseTitleHead {
@@ -311,7 +311,7 @@ html {
 }
 
 .courseName {
-    font-size: 2.5rem;
+    font-size: 5rem;
     font-weight: 600;
 }
 
@@ -319,13 +319,13 @@ html {
     display: flex;
     align-items: flex-end;
     color: #FF9B45;
-    font-size: 1.1rem;
+    font-size: 2rem;
     margin-bottom: 10px;
     font-weight: 600;
 }
 
 .courseMeaning {
-    font-size: 1.2rem;
+    font-size: 2rem;
 }
 
 #strandcourseOffers {
@@ -342,7 +342,7 @@ html {
     margin-left: 140px;
     margin-right: 140px;
     padding-top: 100px;
-    padding-bottom: 600px;
+    padding-bottom: 800px;
 }
 
 .strandTitle {
@@ -399,13 +399,13 @@ html {
 }
 
 .strandName {
-    font-size: 2.5rem;
-    color: #AD2426;
+    font-size: 5rem;
     font-weight: 600;
+    color: #AD2426;
 }
 
 .strandMeaning {
-    font-size: 1.2rem;
+    font-size: 2rem;
 }
 
 .freeTuition {
@@ -436,6 +436,102 @@ html {
     font-size: 1.2rem;
     font-weight: 800;
     margin-bottom: 20px;
+}
+
+/* Developer Contact Scope ======================================================================*/
+.BgDev-Popup {
+    color: white;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: visible;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.BgDev-Popup.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.PopDev-Box {
+    width: 800px;
+    height: 600px;
+    background-image: url("./img/Devloper\ background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    position: relative;
+}
+
+.PopDev-Container {
+    margin-left: 30px;
+    margin-right: 30px;
+    color: #EAD7C0;
+    height: 600px;
+}
+
+.DevTitle {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    font-weight: 800;
+    padding-top: 50px;
+}
+
+.Dev-Name {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.Dev-Role {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.DevCon-Grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.Dev-Contact {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.Dev-Info {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.PopDev-Closer4 {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    font-size: 50px;
+    transform: rotate(45deg);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.PopDev-Closer4:hover {
+    color: #131214;
 }
 
 /* ======================================== FOOTER PAGE ============================================== */ 
